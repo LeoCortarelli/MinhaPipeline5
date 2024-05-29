@@ -1,50 +1,47 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>MinhaPipeline5</groupId>
-  <artifactId>MinhaPipeline5</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>MinhaPipeline5</name>
-  <description>MinhaPipeline5</description>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>MinhaPipeline5</groupId>
+    <artifactId>MinhaPipeline5</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>MinhaPipeline5</name>
+    <description>MinhaPipeline5</description>
 
-  <properties>
+    <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-  </properties>
+    </properties>
 
-  <dependencies>
+    <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>5.8.0</version>
+            <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
-  </dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
-  <build>
+    <build>
         <plugins>
-            <!-- Plugin do Maven para compilar o código -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version> <!-- Versão do plugin -->
+                <version>3.8.1</version>
                 <configuration>
                     <source>17</source>
                     <target>17</target>
                 </configuration>
             </plugin>
-            
-            <!-- Plugin do Surefire para executar os testes -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version> <!-- Versão do plugin -->
-                <configuration>
-                    <includes>
-                        <include>**/*Test.java</include>
-                    </includes>
-                </configuration>
+                <version>3.0.0-M5</version>
             </plugin>
         </plugins>
     </build>
-
 </project>
